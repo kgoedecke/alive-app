@@ -56,7 +56,7 @@ The app is organized as a Swift Package:
 
 - `Sources/AliveCore` contains process parsing and state logic.
 - `Sources/Alive` contains the native menu-bar UI, settings, login-item integration, and power assertions.
-- `site` contains the dependency-free marketing site published with GitHub Pages.
+- `site` contains the dependency-free marketing site deployed on Railway.
 - `scripts` contains deterministic icon, app-bundle, and release packaging tasks.
 
 ## Development
