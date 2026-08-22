@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#F6F0E4"/>
-  <path d="M10 34h10l5-14 6 27 6-13h10" fill="none" stroke="#191B18" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="52" cy="34" r="4" fill="#FF5B35"/>
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shell" x1="7" y1="3" x2="38" y2="41" gradientUnits="userSpaceOnUse"><stop stop-color="#FCFDFB"/><stop offset="0.5" stop-color="#E8EDE8"/><stop offset="1" stop-color="#BCC8BD"/></linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(8 39) rotate(-39) scale(28)"><stop stop-color="#D7F468" stop-opacity="0.8"/><stop offset="1" stop-color="#D7F468" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect x="1" y="1" width="42" height="42" rx="10" fill="url(#shell)"/>
+  <rect x="1" y="1" width="42" height="42" rx="10" fill="url(#glow)"/>
+  <path d="M9 23H16L19 16L24 29L27 22H35" stroke="#465149" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="35" cy="22" r="1.25" fill="#A8C94A"/>
 </svg>

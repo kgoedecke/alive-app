@@ -1,17 +1,30 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="paper" x1="120" y1="50" x2="880" y2="980" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF9ED"/>
-      <stop offset="1" stop-color="#E9DFCD"/>
+    <linearGradient id="shell" x1="190" y1="112" x2="852" y2="916" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBFCFA"/>
+      <stop offset="0.48" stop-color="#E8EDE8"/>
+      <stop offset="1" stop-color="#BEC9BE"/>
     </linearGradient>
-    <filter id="shadow" x="50" y="55" width="924" height="924" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="32" stdDeviation="28" flood-color="#2E1A12" flood-opacity=".28"/>
+    <linearGradient id="glass" x1="226" y1="176" x2="782" y2="834" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="shadow" x="24" y="22" width="976" height="1004" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="38" stdDeviation="34" flood-color="#243024" flood-opacity="0.23"/>
+      <feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#243024" flood-opacity="0.11"/>
     </filter>
+    <filter id="softGlow" x="-120" y="-120" width="1264" height="1264" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="54"/>
+    </filter>
+    <clipPath id="shellClip"><rect x="88" y="76" width="848" height="848" rx="194"/></clipPath>
   </defs>
-  <g filter="url(#shadow)">
-    <rect x="96" y="84" width="832" height="832" rx="190" fill="url(#paper)"/>
-    <rect x="118" y="106" width="788" height="788" rx="168" stroke="#171916" stroke-width="14"/>
+  <g filter="url(#shadow)"><rect x="88" y="76" width="848" height="848" rx="194" fill="#D9E0D8"/></g>
+  <rect x="88" y="76" width="848" height="848" rx="194" fill="url(#shell)"/>
+  <g clip-path="url(#shellClip)">
+    <ellipse cx="120" cy="848" rx="350" ry="234" fill="#D7F468" fill-opacity="0.64" filter="url(#softGlow)"/>
+    <ellipse cx="850" cy="82" rx="300" ry="210" fill="white" fill-opacity="0.78" filter="url(#softGlow)"/>
   </g>
-  <path d="M285 524h131l68-190 91 361 72-171h92" stroke="#171916" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="739" cy="524" r="38" fill="#FF5B35"/>
+  <rect x="154" y="142" width="716" height="716" rx="156" fill="url(#glass)" stroke="white" stroke-opacity="0.82" stroke-width="4"/>
+  <polyline points="286,528 406,528 462,394 560,650 624,508 742,508" fill="none" stroke="#465149" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="742" cy="508" r="18" fill="#A8C94A"/>
 </svg>

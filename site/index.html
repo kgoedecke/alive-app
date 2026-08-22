@@ -24,7 +24,10 @@
       <nav aria-label="Primary navigation">
         <a href="#features">Features</a>
         <a href="#privacy">Privacy</a>
-        <a href="https://github.com/kgoedecke/alive-app">GitHub</a>
+        <a class="github-link" href="https://github.com/kgoedecke/alive-app" aria-label="Alive on GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.64 0 8.13c0 3.59 2.29 6.63 5.47 7.71.4.08.55-.18.55-.39 0-.19-.01-.83-.01-1.51-2.01.38-2.53-.5-2.69-.96-.09-.23-.48-.96-.82-1.15-.28-.15-.68-.53-.01-.54.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.21-3.64-.91-3.64-4.02 0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.45 7.45 0 0 1 8 3.89c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19 0 3.12-1.87 3.81-3.65 4.02.29.25.54.74.54 1.5 0 1.08-.01 1.95-.01 2.22 0 .22.15.47.55.39A8.02 8.02 0 0 0 16 8.13C16 3.64 12.42 0 8 0Z"/></svg>
+          <span>GitHub</span>
+        </a>
       </nav>
       <a class="header-download" href="https://github.com/kgoedecke/alive-app/releases/latest/download/Alive.zip">Download</a>
     </header>
@@ -32,10 +35,10 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="ambient-card ambient-claude" aria-hidden="true">
-          <span></span><div><strong>Claude Code</strong><small>Refactoring the wake controller…</small></div>
+          <img src="assets/claude.svg" alt=""><div><strong>Claude Code</strong><small>Refactoring the wake controller…</small></div>
         </div>
         <div class="ambient-card ambient-codex" aria-hidden="true">
-          <span></span><div><strong>Codex</strong><small>Running the release checks…</small></div>
+          <img src="assets/openai.svg" alt=""><div><strong>Codex</strong><small>Running the release checks…</small></div>
         </div>
         <div class="ambient-card ambient-assertion" aria-hidden="true">
           <small>POWER ASSERTION</small><strong>PreventUserIdleSystemSleep</strong><i>active</i>
@@ -52,8 +55,8 @@
             <em>Active</em>
           </div>
           <div class="product-sessions">
-            <div><i class="claude-dot"></i><span><strong>Claude Code</strong><small>PID 4812</small></span><em>Running</em></div>
-            <div><i class="codex-dot"></i><span><strong>Codex</strong><small>PID 4921</small></span><em>Running</em></div>
+            <div><img class="agent-icon agent-icon-claude" src="assets/claude.svg" alt=""><span><strong>Claude Code</strong><small>PID 4812</small></span><em>Running</em></div>
+            <div><img class="agent-icon" src="assets/openai.svg" alt=""><span><strong>Codex</strong><small>PID 4921</small></span><em>Running</em></div>
           </div>
         </div>
 
@@ -68,7 +71,7 @@
 
       <section class="supported" aria-label="Supported coding agents">
         <p>Built for the tools already in your terminal</p>
-        <div><span><i class="claude-dot"></i>Claude Code</span><span><i class="codex-dot"></i>OpenAI Codex</span></div>
+        <div><span><img class="agent-icon agent-icon-claude" src="assets/claude.svg" alt="">Claude Code</span><span><img class="agent-icon" src="assets/openai.svg" alt="">OpenAI Codex</span></div>
       </section>
 
       <section class="intro section reveal">
@@ -83,7 +86,13 @@
         </div>
 
         <div class="desktop-demo reveal" role="img" aria-label="Alive menu open beside a Codex terminal session">
-          <div class="desktop-menu-bar"><span>●</span><p>Fri Aug 22&nbsp;&nbsp; 9:41 AM&nbsp;&nbsp; ◉&nbsp;&nbsp; ϟ</p></div>
+          <div class="desktop-menu-bar">
+            <div class="mac-menu-left">
+              <svg class="apple-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.54c-.02-2.28 1.86-3.39 1.94-3.44a4.17 4.17 0 0 0-3.28-1.77c-1.38-.15-2.72.83-3.42.83-.72 0-1.8-.82-2.97-.79a4.36 4.36 0 0 0-3.67 2.24c-1.59 2.75-.4 6.79 1.12 9.01.76 1.09 1.65 2.31 2.82 2.27 1.14-.05 1.57-.73 2.94-.73 1.36 0 1.77.73 2.96.7 1.23-.02 2-1.09 2.73-2.19a9.02 9.02 0 0 0 1.25-2.55 3.94 3.94 0 0 1-2.42-3.58ZM14.81 5.86a4.02 4.02 0 0 0 .92-2.88 4.12 4.12 0 0 0-2.67 1.37 3.84 3.84 0 0 0-.95 2.77 3.4 3.4 0 0 0 2.7-1.26Z"/></svg>
+              <strong>Terminal</strong><span>File</span><span>Edit</span><span>View</span><span>Shell</span><span>Window</span><span>Help</span>
+            </div>
+            <div class="mac-menu-right"><span>◔</span><span>⌁</span><span>▰</span><strong>Fri Aug 22&nbsp;&nbsp;9:41 AM</strong></div>
+          </div>
           <div class="terminal-window">
             <div class="window-bar"><i></i><i></i><i></i><span>alive-app — zsh</span></div>
             <div class="terminal-content">
@@ -95,15 +104,19 @@
             </div>
           </div>
           <div class="alive-menu">
-            <div class="menu-heading"><span class="menu-icon"><i></i></span><div><strong>Your Mac is staying awake</strong><small>Codex detected</small></div></div>
+            <div class="menu-heading"><img src="assets/logo.svg" alt=""><div><strong>Your Mac is staying awake</strong><small>Claude Code + Codex detected</small></div></div>
             <hr>
             <p><span>Keep Awake Now</span><kbd>⌘ K</kbd></p>
             <p><span><b>✓</b> Auto-detect Claude Code &amp; Codex</span><kbd>⌘ A</kbd></p>
             <p><span><b>✓</b> Keep Display Awake</span><kbd>⌘ D</kbd></p>
             <hr>
-            <p><span><i class="codex-dot"></i> 1 agent session detected</span><em>›</em></p>
+            <p><span class="session-count"><img src="assets/claude.svg" alt=""><img src="assets/openai.svg" alt="">2 agent sessions detected</span><em>›</em></p>
             <hr>
             <p><span>Launch at Login</span></p>
+            <p><span>Alive Website</span></p>
+            <p><span>View Source on GitHub</span></p>
+            <hr>
+            <p><span>About Alive</span></p>
             <p class="menu-muted"><span>Quit Alive</span><kbd>⌘ Q</kbd></p>
           </div>
         </div>
