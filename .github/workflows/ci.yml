@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: swift test
+      - name: Build app
+        run: swift build -c release --product Alive
+      - name: Package app
+        run: scripts/make_release.sh 0.0.0-ci
+      - name: Verify bundle
+        run: |
+          plutil -lint build/Alive.app/Contents/Info.plist
+          codesign --verify --deep --strict --verbose=2 build/Alive.app
+          test -x build/Alive.app/Contents/MacOS/Alive
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Alive-ci
+          path: build/Alive.zip

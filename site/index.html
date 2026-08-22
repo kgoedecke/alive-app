@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f8f6">
+    <meta name="description" content="Alive keeps your Mac awake while Claude Code and Codex are working. Free, private, and open source.">
+    <meta property="og:title" content="Alive — uninterrupted coding-agent sessions">
+    <meta property="og:description" content="A tiny open-source menu bar app that keeps your Mac awake while Claude Code and Codex work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alive-site-production.up.railway.app">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <title>Alive — Keep your Mac awake while agents work</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Alive home">
+        <img src="assets/logo.svg" width="30" height="30" alt="">
+        <span>Alive</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="https://github.com/kgoedecke/alive-app">GitHub</a>
+      </nav>
+      <a class="header-download" href="https://github.com/kgoedecke/alive-app/releases/latest/download/Alive.zip">Download</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="ambient-card ambient-claude" aria-hidden="true">
+          <span></span><div><strong>Claude Code</strong><small>Refactoring the wake controller…</small></div>
+        </div>
+        <div class="ambient-card ambient-codex" aria-hidden="true">
+          <span></span><div><strong>Codex</strong><small>Running the release checks…</small></div>
+        </div>
+        <div class="ambient-card ambient-assertion" aria-hidden="true">
+          <small>POWER ASSERTION</small><strong>PreventUserIdleSystemSleep</strong><i>active</i>
+        </div>
+        <div class="ambient-card ambient-display" aria-hidden="true">
+          <small>DISPLAY</small><strong>Stays on</strong><i>optional</i>
+        </div>
+
+        <div class="hero-product" role="img" aria-label="Alive showing two active coding-agent sessions">
+          <div class="product-bar"><span><i></i> Alive</span><small>Fri 9:41</small></div>
+          <div class="product-status">
+            <span class="status-light"><i></i></span>
+            <div><strong>Your Mac is staying awake</strong><small>Claude Code + Codex detected</small></div>
+            <em>Active</em>
+          </div>
+          <div class="product-sessions">
+            <div><i class="claude-dot"></i><span><strong>Claude Code</strong><small>PID 4812</small></span><em>Running</em></div>
+            <div><i class="codex-dot"></i><span><strong>Codex</strong><small>PID 4921</small></span><em>Running</em></div>
+          </div>
+        </div>
+
+        <div class="hero-copy reveal">
+          <img src="assets/logo.svg" width="48" height="48" alt="">
+          <h1>Keep your Mac awake<br>while your agents work.</h1>
+          <p>Alive notices when Claude Code or Codex is running and quietly prevents sleep until the work is done.</p>
+          <a class="button button-primary" href="https://github.com/kgoedecke/alive-app/releases/latest/download/Alive.zip">Download free for macOS</a>
+          <small>Free and open source. No account. macOS 13+.</small>
+        </div>
+      </section>
+
+      <section class="supported" aria-label="Supported coding agents">
+        <p>Built for the tools already in your terminal</p>
+        <div><span><i class="claude-dot"></i>Claude Code</span><span><i class="codex-dot"></i>OpenAI Codex</span></div>
+      </section>
+
+      <section class="intro section reveal">
+        <p>Alive is a small, native utility that follows the work instead of a timer. Start an agent and the wake lock comes on. End the final session and your normal sleep settings return.</p>
+      </section>
+
+      <section class="product section" id="features">
+        <div class="section-heading reveal">
+          <p>How it feels</p>
+          <h2>There when you need it.<br>Invisible when you don’t.</h2>
+          <span>Everything lives in the menu bar, one click away.</span>
+        </div>
+
+        <div class="desktop-demo reveal" role="img" aria-label="Alive menu open beside a Codex terminal session">
+          <div class="desktop-menu-bar"><span>●</span><p>Fri Aug 22&nbsp;&nbsp; 9:41 AM&nbsp;&nbsp; ◉&nbsp;&nbsp; ϟ</p></div>
+          <div class="terminal-window">
+            <div class="window-bar"><i></i><i></i><i></i><span>alive-app — zsh</span></div>
+            <div class="terminal-content">
+              <p><b>~</b> codex --full-auto</p>
+              <p class="muted">› Reading the Swift package…</p>
+              <p class="muted">› Updating process detection…</p>
+              <p><i>✓</i> Build complete</p>
+              <span class="cursor"></span>
+            </div>
+          </div>
+          <div class="alive-menu">
+            <div class="menu-heading"><span class="menu-icon"><i></i></span><div><strong>Your Mac is staying awake</strong><small>Codex detected</small></div></div>
+            <hr>
+            <p><span>Keep Awake Now</span><kbd>⌘ K</kbd></p>
+            <p><span><b>✓</b> Auto-detect Claude Code &amp; Codex</span><kbd>⌘ A</kbd></p>
+            <p><span><b>✓</b> Keep Display Awake</span><kbd>⌘ D</kbd></p>
+            <hr>
+            <p><span><i class="codex-dot"></i> 1 agent session detected</span><em>›</em></p>
+            <hr>
+            <p><span>Launch at Login</span></p>
+            <p class="menu-muted"><span>Quit Alive</span><kbd>⌘ Q</kbd></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-list section">
+        <article class="reveal"><span>01</span><h3>Automatic detection</h3><p>Alive finds local Claude Code and Codex processes. There is nothing to start, name, or time.</p></article>
+        <article class="reveal"><span>02</span><h3>Native power control</h3><p>It uses macOS power-management APIs directly, with no Electron runtime or background web service.</p></article>
+        <article class="reveal"><span>03</span><h3>Manual when needed</h3><p>Override detection, choose whether the display stays on, and launch Alive at login.</p></article>
+      </section>
+
+      <section class="privacy section" id="privacy">
+        <div class="privacy-copy reveal">
+          <p>Privacy by default</p>
+          <h2>Your terminal stays yours.</h2>
+          <span>Alive checks executable names. It never reads prompts, output, files, or network traffic.</span>
+          <a href="https://github.com/kgoedecke/alive-app">Read every line on GitHub <i>↗</i></a>
+        </div>
+        <div class="privacy-facts reveal">
+          <div><span>Network requests</span><strong>0</strong></div>
+          <div><span>Analytics events</span><strong>0</strong></div>
+          <div><span>Required accounts</span><strong>0</strong></div>
+          <div><span>License</span><strong>MIT</strong></div>
+        </div>
+      </section>
+
+      <section class="final-cta reveal">
+        <img src="assets/logo.svg" width="50" height="50" alt="">
+        <h2>Let the agents finish.</h2>
+        <p>Alive is free, private, and ready for your menu bar.</p>
+        <a class="button button-primary" href="https://github.com/kgoedecke/alive-app/releases/latest/download/Alive.zip">Download free for macOS</a>
+        <small>Apple silicon &amp; Intel · macOS 13+</small>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><img src="assets/logo.svg" width="28" height="28" alt=""><span>Alive</span></a>
+      <p>Made for long-running ideas.</p>
+      <div><a href="https://github.com/kgoedecke/alive-app">GitHub</a><a href="https://github.com/kgoedecke/alive-app/blob/main/LICENSE">MIT License</a><span>© <span id="year">2026</span></span></div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

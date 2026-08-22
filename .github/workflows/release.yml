@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: swift test
+      - name: Build universal release
+        env:
+          ALIVE_ARCHES: arm64 x86_64
+        run: scripts/make_release.sh "${GITHUB_REF_NAME#v}"
+      - name: Verify architectures and signature
+        run: |
+          lipo -archs build/Alive.app/Contents/MacOS/Alive | grep -q arm64
+          lipo -archs build/Alive.app/Contents/MacOS/Alive | grep -q x86_64
+          codesign --verify --deep --strict --verbose=2 build/Alive.app
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" build/Alive.zip --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" build/Alive.zip --generate-notes --title "Alive ${GITHUB_REF_NAME#v}"
+          fi
