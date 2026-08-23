@@ -1,0 +1,53 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tile" x1="132" y1="82" x2="878" y2="938" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFEFA"/>
+      <stop offset="0.52" stop-color="#E7EEE8"/>
+      <stop offset="1" stop-color="#BCCBBF"/>
+    </linearGradient>
+    <radialGradient id="limeGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(698 708) rotate(-132) scale(438)">
+      <stop stop-color="#D7F468" stop-opacity="0.92"/>
+      <stop offset="0.52" stop-color="#D7F468" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#D7F468" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="heart" x1="343" y1="274" x2="653" y2="786" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.54" stop-color="#F1F5F1"/>
+      <stop offset="1" stop-color="#DCE5DE"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="454" y1="345" x2="581" y2="702" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#465149"/>
+      <stop offset="1" stop-color="#202824"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-66" y="-54" width="1156" height="1174" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="36" stdDeviation="34" flood-color="#324238" flood-opacity="0.24"/>
+    </filter>
+    <filter id="heartShadow" x="172" y="188" width="680" height="722" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="30" stdDeviation="34" flood-color="#334239" flood-opacity="0.28"/>
+    </filter>
+    <clipPath id="tileClip"><rect x="44" y="44" width="936" height="936" rx="224"/></clipPath>
+  </defs>
+
+  <g filter="url(#tileShadow)">
+    <rect x="44" y="44" width="936" height="936" rx="224" fill="url(#tile)"/>
+    <rect x="47" y="47" width="930" height="930" rx="221" stroke="white" stroke-opacity="0.84" stroke-width="6"/>
+  </g>
+
+  <g clip-path="url(#tileClip)">
+    <circle cx="698" cy="708" r="438" fill="url(#limeGlow)"/>
+    <path d="M-30 791C177 677 328 702 469 791C621 886 794 883 1060 707V1045H-30V791Z" fill="#ADBCB1" fill-opacity="0.2"/>
+    <path d="M102 176C284 40 573 42 789 140" stroke="white" stroke-opacity="0.54" stroke-width="42" stroke-linecap="round"/>
+  </g>
+
+  <ellipse cx="512" cy="833" rx="266" ry="66" fill="#607067" fill-opacity="0.16"/>
+
+  <g filter="url(#heartShadow)">
+    <path d="M512 816C468 778 250 625 250 432C250 309 339 237 441 255C473 261 498 279 512 307C526 279 551 261 583 255C685 237 774 309 774 432C774 625 556 778 512 816Z" fill="url(#heart)"/>
+    <path d="M512 790C468 751 278 612 278 435C278 331 352 273 438 286C471 291 496 311 512 344C528 311 553 291 586 286C672 273 746 331 746 435C746 612 556 751 512 790Z" stroke="white" stroke-opacity="0.78" stroke-width="12"/>
+    <path d="M322 393C348 315 427 286 486 337" stroke="white" stroke-opacity="0.86" stroke-width="24" stroke-linecap="round"/>
+  </g>
+
+  <path d="M557 336L418 558H506L473 714L612 493H524L557 336Z" fill="url(#bolt)"/>
+  <path d="M550 374L455 533H531L505 651" stroke="white" stroke-opacity="0.14" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="690" cy="306" r="18" fill="#D7F468"/>
+</svg>

@@ -1,10 +1,13 @@
 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="shell" x1="7" y1="3" x2="38" y2="41" gradientUnits="userSpaceOnUse"><stop stop-color="#FCFDFB"/><stop offset="0.5" stop-color="#E8EDE8"/><stop offset="1" stop-color="#BCC8BD"/></linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(8 39) rotate(-39) scale(28)"><stop stop-color="#D7F468" stop-opacity="0.8"/><stop offset="1" stop-color="#D7F468" stop-opacity="0"/></radialGradient>
+    <linearGradient id="shell" x1="6" y1="3" x2="39" y2="42" gradientUnits="userSpaceOnUse"><stop stop-color="#FCFEFA"/><stop offset="0.52" stop-color="#E6EDE7"/><stop offset="1" stop-color="#B8C7B5"/></linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(36 38) rotate(-135) scale(20)"><stop stop-color="#D7F468" stop-opacity="0.82"/><stop offset="1" stop-color="#D7F468" stop-opacity="0"/></radialGradient>
   </defs>
   <rect x="1" y="1" width="42" height="42" rx="10" fill="url(#shell)"/>
   <rect x="1" y="1" width="42" height="42" rx="10" fill="url(#glow)"/>
-  <path d="M9 23H16L19 16L24 29L27 22H35" stroke="#465149" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="35" cy="22" r="1.25" fill="#A8C94A"/>
+  <rect x="11.4" y="11.6" width="21.2" height="22.4" rx="9" fill="#F8FBF8" stroke="white" stroke-width="0.65"/>
+  <rect x="16.2" y="20.1" width="2.1" height="4.2" rx="1.05" fill="#465149"/>
+  <rect x="25.7" y="20.1" width="2.1" height="4.2" rx="1.05" fill="#465149"/>
+  <path d="M19.1 26.9C19.9 28.2 20.9 28.8 22 28.8C23.1 28.8 24.1 28.2 24.9 26.9" stroke="#78847B" stroke-width="1.05" stroke-linecap="round"/>
+  <g stroke="#A8C94A" stroke-width="1.25" stroke-linecap="round"><path d="M34.2 8.4V14.2"/><path d="M31.7 9.85L36.7 12.75"/><path d="M36.7 9.85L31.7 12.75"/></g>
 </svg>
